@@ -1,5 +1,5 @@
-def search_patients(patient, disease):
-    return [patient["Name"] for patient in patient if patient["Disease"] == disease]
+def search_patients(patients, disease):
+    return [patient["Name"] for patient in patients if patient["Disease"] == disease]
 
 
 patients = [
@@ -8,6 +8,6 @@ patients = [
     {"Name": "Charlie", "Age": 35, "Disease": "Flu"}
 ]
 search_disease = "Flu"
-patients_with_disease = search_patients(patients, search_disease)
+result = search_patients(patients, search_disease)
 
-print(f"Patients with {search_disease}: {patients_with_disease}")
+print(f"Patients with {search_disease}: {result}")
