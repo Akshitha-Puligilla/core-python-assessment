@@ -1,5 +1,7 @@
+def calculate_average(self):
+        return sum(self.marks) / len(self.marks)
 def calculate_average_marks(stu):
-    avg = {name: round(sum(marks) / len(marks), 2) for name, marks in stu.items()}
+    avg = {name: round(stu.calculate_average(), 2) for name, marks in stu.items()}
     return avg
 
 
